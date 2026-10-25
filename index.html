@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Приватний садок «Бджілка» у Києві, вул. Здолбунівська, 13. Маленькі групи, діти від 1,5 до 4 років, 5-разове харчування, англійська щодня.">
+<meta property="og:title" content="Садок «Бджілка»">
+<meta property="og:description" content="Другий дім для маленьких бджілок. Приватний садок у Києві, вул. Здолбунівська, 13.">
+<meta name="theme-color" content="#F2B93B">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐝</text></svg>">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Садок «Бджілка»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Nunito:wght@400;600;700;800&family=Caveat:wght@600;700&display=swap">
+<style>
+/* Layout: стільниковий ритм — секції як соти, шестикутники як головний мотив; медовий акцент, графіт для тексту, лаванда як друга нота */
+:root{
+  --bg:#FFFCF4;
+  --bg-2:#FFF3D6;
+  --surface:#FFFFFF;
+  --fg:#2B2722;
+  --muted:#6E655A;
+  --honey:#F2B93B;
+  --honey-soft:#F8D88A;
+  --honey-ink:#8A5A00;
+  --lav:#B9A8F0;
+  --lav-soft:#ECE6FF;
+  --line:#EADFC6;
+  --dark-band:#2B2722;
+  --on-dark:#FFF6E2;
+  --shadow:0 18px 40px -22px rgba(120,80,0,.35);
+  --f-display:"Unbounded","Arial Rounded MT Bold","Trebuchet MS",sans-serif;
+  --f-body:"Nunito","Segoe UI",system-ui,sans-serif;
+  --f-hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#1C1915;--bg-2:#26211A;--surface:#2A251E;--fg:#F6EEDD;--muted:#BDB09A;
+    --honey:#F5C24E;--honey-soft:#6B521C;--honey-ink:#FFD777;--lav:#B3A3F2;--lav-soft:#2F2A45;
+    --line:#3A332A;--dark-band:#120F0C;--on-dark:#FFF6E2;--shadow:0 18px 40px -22px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1C1915;--bg-2:#26211A;--surface:#2A251E;--fg:#F6EEDD;--muted:#BDB09A;
+  --honey:#F5C24E;--honey-soft:#6B521C;--honey-ink:#FFD777;--lav:#B3A3F2;--lav-soft:#2F2A45;
+  --line:#3A332A;--dark-band:#120F0C;--on-dark:#FFF6E2;--shadow:0 18px 40px -22px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+
+/* Мобільний: світліший загальний фон */
+@media (max-width:860px){
+  :root{--bg:#FFFFFF;--bg-2:#FFF8E6;--line:#F1E8D3}
+}
+@media (max-width:860px) and (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#2A261F;--bg-2:#332D24;--surface:#3A3329;--line:#4A4135}
+}
+@media (max-width:860px){
+  :root[data-theme="dark"]{--bg:#2A261F;--bg-2:#332D24;--surface:#3A3329;--line:#4A4135}
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--f-display);line-height:1.12;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-body);font-weight:800;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--honey-ink)}
+.hand{font-family:var(--f-hand);font-weight:700}
+:focus-visible{outline:3px solid var(--lav);outline-offset:3px;border-radius:8px}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.scrolled{border-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--f-display);font-weight:800;font-size:1.15rem}
+.logo svg{width:38px;height:38px;flex:none}
+.logo small{display:block;font-family:var(--f-body);font-weight:700;font-size:.7rem;color:var(--muted);letter-spacing:.06em}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a{text-decoration:none;font-weight:700;font-size:.95rem;padding:8px 12px;border-radius:999px;transition:background .2s}
+.nav a:hover{background:var(--bg-2)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-body);font-weight:800;font-size:1rem;text-decoration:none;border:0;cursor:pointer;padding:14px 22px;border-radius:999px;background:var(--honey);color:#2B2722;box-shadow:0 6px 0 -1px color-mix(in srgb,var(--honey) 55%,#7a4b00);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 -1px color-mix(in srgb,var(--honey) 55%,#7a4b00)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 -1px color-mix(in srgb,var(--honey) 55%,#7a4b00)}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 2px var(--fg)}
+.nav .btn{padding:10px 18px;font-size:.92rem;margin-left:8px}
+.burger{display:none;width:46px;height:46px;border-radius:14px;border:0;background:var(--bg-2);color:var(--fg);cursor:pointer;place-items:center}
+.burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2.5px;border-radius:2px;background:currentColor;position:relative;transition:transform .25s,opacity .2s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.menu-open .burger span{background:transparent}
+.menu-open .burger span::before{transform:translateY(7px) rotate(45deg)}
+.menu-open .burger span::after{transform:translateY(-7px) rotate(-45deg)}
+
+/* Hero */
+.hero{position:relative;padding-block:56px 72px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,6vw,4.4rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 .hl{background:linear-gradient(color-mix(in srgb,var(--honey) 60%,transparent),color-mix(in srgb,var(--honey) 60%,transparent)) no-repeat 0 88%/100% .32em;-webkit-box-decoration-break:clone;box-decoration-break:clone;animation:swipe 1s .4s cubic-bezier(.6,0,.2,1) both}
+@keyframes swipe{from{background-size:0% .32em}to{background-size:100% .32em}}
+.hero .lead{font-size:1.18rem;color:var(--muted);max-width:34ch;margin-top:20px}
+.hero .note{font-size:1.7rem;color:var(--honey-ink);transform:rotate(-3deg);display:inline-block;margin-bottom:6px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--surface);border:1.5px solid var(--line);font-weight:700;font-size:.92rem}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--honey);flex:none}
+.chip.l i{background:var(--lav)}
+
+.comb{position:relative;aspect-ratio:1/1;max-width:460px;width:100%;justify-self:center}
+.hex{position:absolute;width:44%;aspect-ratio:1/1.1547;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);display:grid;place-items:center;text-align:center;padding:14%;animation:bob 6s ease-in-out infinite}
+.hex b{font-family:var(--f-display);font-size:clamp(1.3rem,3.4vw,2rem);display:block;line-height:1}
+.hex span{font-weight:700;font-size:clamp(.72rem,1.6vw,.88rem);line-height:1.25;display:block;margin-top:6px}
+.h1{left:28%;top:2%;background:var(--honey);color:#2B2722}
+.h2{left:0;top:38%;background:var(--lav-soft);color:var(--fg);animation-delay:-1.5s}
+.h3{left:56%;top:38%;background:var(--dark-band);color:var(--on-dark);animation-delay:-3s}
+.h4{left:28%;top:73%;width:30%;background:var(--honey-soft);animation-delay:-4.5s;padding:0}
+.h4 svg{width:62%}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.hero-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(600px 380px at 85% 10%,color-mix(in srgb,var(--honey) 22%,transparent),transparent 70%),
+  radial-gradient(520px 360px at 0% 90%,color-mix(in srgb,var(--lav) 20%,transparent),transparent 70%)}
+
+/* Sections */
+section{padding-block:80px}
+.sec-head{display:grid;gap:12px;max-width:640px;margin-bottom:40px}
+.sec-head h2{font-size:clamp(1.8rem,4.2vw,2.8rem);font-weight:700}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+/* About */
+.about{background:var(--bg-2)}
+.about .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about .big{font-family:var(--f-display);font-weight:700;font-size:clamp(1.5rem,3.4vw,2.3rem);line-height:1.25}
+.about .big em{font-style:normal;background:linear-gradient(transparent 60%,var(--honey-soft) 60%);padding:0 .1em}
+.points{display:grid;gap:16px}
+.point{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.point .ic{width:52px;height:52px;display:grid;place-items:center;background:var(--surface);border-radius:16px;border:1.5px solid var(--line)}
+.point .ic svg{width:26px;height:26px;stroke:var(--honey-ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.point h3{font-family:var(--f-body);font-weight:800;font-size:1.08rem}
+.point p{color:var(--muted);font-size:.98rem}
+
+/* Features honeycomb */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feat{background:var(--surface);border:1.5px solid var(--line);border-radius:26px;padding:24px 22px 22px;display:grid;gap:10px;align-content:start;transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
+.feat:hover{transform:translateY(-6px) rotate(-.6deg);border-color:var(--honey);box-shadow:var(--shadow)}
+.feat .badge{width:58px;height:66px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--honey-soft);display:grid;place-items:center}
+.feat:nth-child(3n+2) .badge{background:var(--lav-soft)}
+.feat .badge svg{width:28px;height:28px;stroke:var(--fg);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.feat h3{font-family:var(--f-body);font-weight:800;font-size:1.06rem;line-height:1.3}
+.feat p{color:var(--muted);font-size:.94rem;line-height:1.5}
+
+/* Day */
+.day{background:var(--dark-band);color:var(--on-dark);border-radius:40px;margin-inline:max(8px,env(safe-area-inset-left,0px))}
+.day .eyebrow{color:var(--honey)}
+.day .sec-head p{color:color-mix(in srgb,var(--on-dark) 70%,transparent)}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:s}
+.step{position:relative;padding:22px 18px;border-radius:22px;background:color-mix(in srgb,var(--on-dark) 7%,transparent);border:1px solid color-mix(in srgb,var(--on-dark) 12%,transparent);min-width:0}
+.step .n{font-family:var(--f-hand);font-size:2rem;color:var(--honey);line-height:1}
+.step h3{font-family:var(--f-body);font-weight:800;font-size:1.02rem;margin-top:6px}
+.step p{font-size:.9rem;color:color-mix(in srgb,var(--on-dark) 70%,transparent);margin-top:4px}
+.day .foot{margin-top:22px;font-size:.92rem;color:color-mix(in srgb,var(--on-dark) 60%,transparent)}
+
+/* Food */
+.food .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.plates{display:flex;flex-wrap:wrap;gap:12px}
+.plate{flex:1 1 150px;display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:18px;background:var(--surface);border:1.5px solid var(--line);font-weight:800}
+.plate .dot{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--honey-soft);font-family:var(--f-display);font-size:.9rem;flex:none;color:var(--fg)}
+.plate:nth-child(even) .dot{background:var(--lav-soft)}
+.bowl{position:relative;max-width:380px;width:100%;justify-self:center}
+.bowl svg{width:100%;height:auto;display:block}
+.steam{animation:steam 3.2s ease-in-out infinite;transform-origin:center bottom}
+.steam:nth-child(2){animation-delay:-1s}.steam:nth-child(3){animation-delay:-2s}
+@keyframes steam{0%{opacity:0;transform:translateY(8px)}40%{opacity:.8}100%{opacity:0;transform:translateY(-16px)}}
+
+/* Team */
+.team{background:var(--lav-soft)}
+.team .card{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;background:var(--surface);border-radius:36px;padding:40px;box-shadow:var(--shadow)}
+.avatar{width:200px;aspect-ratio:1/1.1547;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--honey);display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:4.4rem;color:#2B2722}
+.team blockquote{margin:0;font-size:1.12rem;max-width:58ch}
+.team blockquote p+p{margin-top:12px}
+.team .sign{font-size:1.9rem;color:var(--honey-ink);margin-top:10px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.q{background:var(--surface);border-radius:22px;padding:20px;border:1.5px solid var(--line);font-size:.98rem;min-width:0}
+.q small{display:block;margin-top:8px;color:var(--muted);font-weight:700;font-size:.82rem}
+
+/* Join */
+.join .box{position:relative;overflow:hidden;background:var(--honey);color:#2B2722;border-radius:40px;padding:56px 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.join h2{font-size:clamp(1.9rem,4.6vw,3.2rem);font-weight:800}
+.join p{font-size:1.1rem;margin-top:14px;max-width:44ch}
+.join .btn{background:#2B2722;color:#FFF6E2;box-shadow:0 6px 0 -1px #000}
+.join .btn.ghost{background:transparent;color:#2B2722;box-shadow:inset 0 0 0 2px #2B2722}
+.join .pattern{position:absolute;right:-60px;top:-40px;width:360px;opacity:.18;pointer-events:none}
+.steps3{display:grid;gap:12px;position:relative}
+.steps3 div{background:rgba(255,255,255,.55);border-radius:18px;padding:14px 18px;font-weight:700}
+.steps3 b{font-family:var(--f-display);margin-right:8px}
+
+/* Contacts */
+.contacts .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ct{background:var(--surface);border:1.5px solid var(--line);border-radius:26px;padding:26px;display:grid;gap:10px;align-content:start;min-width:0}
+.ct h3{font-family:var(--f-body);font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ct .v{font-family:var(--f-display);font-weight:700;font-size:1.25rem;line-height:1.3;overflow-wrap:anywhere}
+.ct a.link{font-weight:800;color:var(--honey-ink);text-underline-offset:4px}
+footer{padding-block:40px 110px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* Reveal: видимий стан за замовчуванням, анімація лише як прикраса */
+.rv.in{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:.001;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* Mobile CTA */
+.mcta{display:none}
+
+/* Bee */
+#bee{position:fixed;left:0;top:0;width:58px;height:58px;z-index:50;pointer-events:none;opacity:0;will-change:transform}
+#bee.on{opacity:1;pointer-events:auto;cursor:pointer}
+#bee .wing{transform-origin:50% 90%;animation:flap .08s linear infinite alternate}
+#bee .wing.b{animation-delay:-.04s}
+@keyframes flap{from{transform:scaleY(1)}to{transform:scaleY(.35)}}
+.trail{position:fixed;width:6px;height:6px;border-radius:50%;background:var(--honey);z-index:49;pointer-events:none;animation:fade 1.1s ease-out forwards}
+@keyframes fade{to{opacity:0;transform:scale(.2)}}
+.bzz{position:fixed;z-index:51;font-family:var(--f-hand);font-weight:700;font-size:1.6rem;color:var(--honey-ink);pointer-events:none;animation:pop 1.2s ease-out forwards}
+@keyframes pop{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-40px)}}
+
+/* Responsive */
+@media (max-width:980px){
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .timeline{grid-template-columns:repeat(2,1fr)}
+  .timeline .step:last-child{grid-column:1/-1}
+  .contacts .grid{grid-template-columns:1fr 1fr}
+  .contacts .ct:last-child{grid-column:1/-1}
+}
+@media (max-width:860px){
+  .nav{position:fixed;inset:calc(64px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;align-items:stretch;gap:4px;background:var(--bg);padding:12px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.25s}
+  .menu-open .nav{transform:none;opacity:1;visibility:visible}
+  .nav a{padding:14px 12px;font-size:1.05rem}
+  .nav .btn{margin:8px 0 0;justify-content:center}
+  .burger{display:grid}
+  .hero .wrap,.about .grid,.food .grid,.join .box{grid-template-columns:1fr}
+  .hero{padding-block:28px 48px}
+  .comb{max-width:340px}
+  .team .card{grid-template-columns:1fr;padding:28px;gap:24px;justify-items:start}
+  .avatar{width:130px;font-size:3rem}
+  .quotes{grid-template-columns:1fr}
+  .join .box{padding:36px 24px}
+  section{padding-block:60px}
+  .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
+  .mcta.show{transform:none}
+  .mcta .btn{flex:1;justify-content:center}
+  body{font-size:16px}
+}
+@media (max-width:520px){
+  .feat-grid,.timeline,.contacts .grid{grid-template-columns:1fr}
+  .timeline .step:last-child,.contacts .ct:last-child{grid-column:auto}
+  .day{border-radius:28px;margin-inline:6px}
+  .hero .lead{font-size:1.06rem}
+  .cta-row .btn{flex:1 1 100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="beeSym" viewBox="0 0 64 64">
+      <ellipse class="wing a" cx="26" cy="20" rx="9" ry="13" fill="#E9F3FF" stroke="#2B2722" stroke-width="2" opacity=".9"/>
+      <ellipse class="wing b" cx="38" cy="20" rx="9" ry="13" fill="#E9F3FF" stroke="#2B2722" stroke-width="2" opacity=".9"/>
+      <ellipse cx="32" cy="38" rx="17" ry="13" fill="#F2B93B" stroke="#2B2722" stroke-width="2.5"/>
+      <path d="M26 26.5c-2 3.5-2 19 0 23M34 25c-2 4-2 22 0 26" stroke="#2B2722" stroke-width="5" fill="none"/>
+      <path d="M49 38l6 0" stroke="#2B2722" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="17" cy="35" r="2.3" fill="#2B2722"/>
+      <path d="M14 41c2 2 5 2 6 0" stroke="#2B2722" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <circle cx="13" cy="39" r="1.8" fill="#F28B8B" opacity=".8"/>
+      <path d="M18 26c-2-5-5-7-8-7M22 25c0-5-2-8-4-10" stroke="#2B2722" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#hero" aria-label="Бджілка, на початок">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#beeSym"/></svg>
+      <span>Бджілка<small>приватний садок · Київ</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Розділи">
+      <a href="#about">Про нас</a>
+      <a href="#features">Що ми даємо</a>
+      <a href="#day">Наш день</a>
+      <a href="#team">Відгуки</a>
+      <a href="#contacts">Контакти</a>
+      <a class="btn" href="https://ig.me/m/beekyiv" target="_blank" rel="noopener">Записатися</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="wrap">
+      <div>
+        <span class="note hand">Триває набір 🐝</span>
+        <h1>Другий дім для <span class="hl">маленьких бджілок</span></h1>
+        <p class="lead">Сімейна «Бджілка» на Здолбунівській: домашня атмосфера, сильна програма розвитку і турбота без перевантаження.</p>
+        <div class="cta-row">
+          <a class="btn" href="https://ig.me/m/beekyiv" target="_blank" rel="noopener">Написати в Direct
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn ghost" href="#features">Що в нас є</a>
+        </div>
+        <div class="facts">
+          <span class="chip"><i></i>від 1,5 до 4 років</span>
+          <span class="chip l"><i></i>маленькі групи</span>
+          <span class="chip"><i></i>5 прийомів їжі</span>
+        </div>
+      </div>
+      <div class="comb" aria-hidden="true">
+        <div class="hex h1"><div><b>1,5–4</b><span>роки — вік наших бджілок</span></div></div>
+        <div class="hex h2"><div><b>5×</b><span>домашнє харчування на день</span></div></div>
+        <div class="hex h3"><div><b>EN</b><span>англійська щодня</span></div></div>
+        <div class="hex h4"><svg viewBox="0 0 64 64"><use href="#beeSym"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap grid">
+      <div class="rv">
+        <span class="eyebrow">Про «Бджілку»</span>
+        <p class="big" style="margin-top:14px">У нас завжди небагато дітей. Це наш <em>свідомий вибір</em>: кожну дитину знаємо за настроєм, звичками й улюбленими іграшками.</p>
+      </div>
+      <div class="points rv">
+        <div class="point">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div>
+          <div><h3>Як другий дім</h3><p>Спокійний ритм, обійми щодня й дорослі, які ставляться до дітей як до своїх.</p></div>
+        </div>
+        <div class="point">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.5 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div>
+          <div><h3>Швидка адаптація</h3><p>У маленькій групі дитина не губиться і звикає до садочка м'якше.</p></div>
+        </div>
+        <div class="point">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div>
+          <div><h3>Розвиток без перевантаження</h3><p>Продумана програма і заняття з фахівцями, які щиро люблять свою справу.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Що ми даємо дітям</span>
+        <h2>Вісім причин, чому малюки біжать до нас зранку</h2>
+      </div>
+      <div class="feat-grid">
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 .6-3.6 2-4.6 2.3 0 4 2 4 4.6"/></svg></div><h3>Сімейна атмосфера</h3><p>Тепло, турбота і відчуття другої родини для кожного малюка.</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M4 6h10M9 4v2M6 6c0 4 3 7 6 8M12 6c-1 4-4 7-7 8M13 20l4-9 4 9M14.5 17h5"/></svg></div><h3>Англійська щодня</h3><p>Заняття з професійною філологинею, з перших років і в грі.</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3M7.5 15h9"/></svg></div><h3>Досліди і сучасні методики</h3><p>Розвиваємося через цікаві заняття, експерименти й творчість.</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/></svg></div><h3>Маленькі групи</h3><p>Максимум уваги: вихователь бачить кожну дитину, а не «групу».</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M3 12h18M5 12a7 7 0 0 0 14 0M12 5v3M9 3.5 10 6M15 3.5 14 6"/></svg></div><h3>5-разове харчування</h3><p>Збалансоване, домашнє, смачне. Голодним тут ніхто не залишиться.</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M12 3c-1.5 3-5 4-5 8a5 5 0 0 0 10 0c0-4-3.5-5-5-8zM9 21h6"/></svg></div><h3>Майстер-класи</h3><p>Різноманітні творчі майстер-класи та тематичні свята протягом року.</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M4 14v-4a8 8 0 0 1 16 0v4M4 14a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2zM20 14a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM17 16v1a3 3 0 0 1-3 3h-2"/></svg></div><h3>Логопед</h3><p>Спеціаліст допомагає розвивати мовлення м'яко і вчасно.</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6M2 10h20"/></svg></div><h3>Закрита територія</h3><p>Власний майданчик на закритій прибудинковій території.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="day" id="day">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Наш день</span>
+        <h2>Спокійний ритм, у якому є місце і грі, і навчанню</h2>
+        <p>Так приблизно виглядає день бджілки. Точний розклад розповімо під час знайомства.</p>
+      </div>
+      <div class="timeline">
+        <div class="step rv"><span class="n">ранок</span><h3>Зустріч і сніданок</h3><p>Обійми, ранкова розминка і теплий сніданок.</p></div>
+        <div class="step rv"><span class="n">заняття</span><h3>Розвиток і англійська</h3><p>Короткі ігрові заняття, досліди, творчість.</p></div>
+        <div class="step rv"><span class="n">прогулянка</span><h3>Майданчик і обід</h3><p>Свіже повітря на закритій території, потім домашній обід.</p></div>
+        <div class="step rv"><span class="n">тиша</span><h3>Денний сон</h3><p>Відпочинок у затишній спальні.</p></div>
+        <div class="step rv"><span class="n">вечір</span><h3>Полуденок і ігри</h3><p>Майстер-класи, вільна гра, вечеря і зустріч з батьками.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="food" id="food">
+    <div class="wrap grid">
+      <div class="bowl rv" aria-hidden="true">
+        <svg viewBox="0 0 300 260">
+          <g stroke="var(--muted)" stroke-width="5" stroke-linecap="round" fill="none">
+            <path class="steam" d="M110 70c-12-14 12-22 0-38"/>
+            <path class="steam" d="M150 64c-12-14 12-22 0-38"/>
+            <path class="steam" d="M190 70c-12-14 12-22 0-38"/>
+          </g>
+          <ellipse cx="150" cy="112" rx="118" ry="22" fill="var(--honey-soft)"/>
+          <path d="M32 112h236c0 70-52 112-118 112S32 182 32 112z" fill="var(--honey)" stroke="var(--fg)" stroke-width="4"/>
+          <ellipse cx="150" cy="112" rx="118" ry="22" fill="none" stroke="var(--fg)" stroke-width="4"/>
+          <circle cx="112" cy="160" r="6" fill="var(--fg)"/><circle cx="188" cy="160" r="6" fill="var(--fg)"/>
+          <path d="M128 182c12 12 32 12 44 0" stroke="var(--fg)" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <circle cx="96" cy="176" r="9" fill="#F28B8B" opacity=".55"/><circle cx="204" cy="176" r="9" fill="#F28B8B" opacity=".55"/>
+        </svg>
+      </div>
+      <div class="rv">
+        <div class="sec-head" style="margin-bottom:24px">
+          <span class="eyebrow">Харчування</span>
+          <h2>Домашнє, як у бабусі, і щасливі маленькі животики</h2>
+          <p>Готуємо збалансовано п'ять разів на день, щоб у дитини вистачало сил на все цікаве.</p>
+        </div>
+        <div class="plates">
+          <div class="plate"><span class="dot">1</span>Сніданок</div>
+          <div class="plate"><span class="dot">2</span>Другий сніданок</div>
+          <div class="plate"><span class="dot">3</span>Обід</div>
+          <div class="plate"><span class="dot">4</span>Полуденок</div>
+          <div class="plate"><span class="dot">5</span>Вечеря</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team" id="team">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Відгуки</span>
+        <h2>Що про нас кажуть</h2>
+      </div>
+      <div class="quotes" style="margin-top:0">
+        <div class="q rv">«Стільки любові та турботи дарує діткам.»<small>відгук мами з Instagram</small></div>
+        <div class="q rv">«У Бджілці все найкраще для дітей!»<small>коментар з Instagram</small></div>
+        <div class="q rv">«Чому таких садочків не було, коли я була маленька?»<small>коментар з Instagram</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="wrap">
+      <div class="box rv">
+        <svg class="pattern" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="#2B2722" stroke-width="5"><path d="M50 10l35 20v40L50 90 15 70V30z"/><path d="M120 10l35 20v40l-35 20-35-20V30z"/><path d="M85 70l35 20v40l-35 20-35-20V90z"/><path d="M155 70l35 20v40l-35 20-35-20V90z"/></g></svg>
+        <div>
+          <h2>Місця для нових бджілок ще є</h2>
+          <p>Приймаємо малюків від 1,5 до 4 років. Напишіть нам, щоб прийти познайомитися, подивитися садочок і поставити всі запитання.</p>
+          <div class="cta-row">
+            <a class="btn" href="https://ig.me/m/beekyiv" target="_blank" rel="noopener">Написати в Direct</a>
+            <a class="btn ghost" href="https://www.instagram.com/beekyiv/" target="_blank" rel="noopener">Наш Instagram</a>
+          </div>
+        </div>
+        <div class="steps3">
+          <div><b>1</b>Пишете нам у Direct</div>
+          <div><b>2</b>Домовляємося про знайомство</div>
+          <div><b>3</b>Малюк приходить на адаптацію</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts" id="contacts">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="eyebrow">Контакти</span>
+        <h2>Де нас знайти</h2>
+      </div>
+      <div class="grid">
+        <div class="ct rv">
+          <h3>Адреса</h3>
+          <p class="v">вул. Здолбунівська, 13<br>ЖК «Поетичний», Київ</p>
+          <a class="link" href="https://www.google.com/maps/search/?api=1&query=%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+13+%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">Відкрити на мапі →</a>
+        </div>
+        <div class="ct rv">
+          <h3>Instagram</h3>
+          <p class="v">@beekyiv</p>
+          <a class="link" href="https://www.instagram.com/beekyiv/" target="_blank" rel="noopener">Написати в Direct →</a>
+        </div>
+        <div class="ct rv">
+          <h3>TikTok</h3>
+          <p class="v">@beekyiv</p>
+          <a class="link" href="https://www.tiktok.com/@beekyiv" target="_blank" rel="noopener">Дивитися відео →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Приватний садок «Бджілка», Київ</span>
+    <span class="hand" style="font-size:1.3rem;color:var(--honey-ink)">Як другий дім, тільки ще цікавіше</span>
+  </div>
+</footer>
+
+<div class="mcta" id="mcta"><a class="btn" href="https://ig.me/m/beekyiv" target="_blank" rel="noopener">Записатися на знайомство</a></div>
+
+<svg id="bee" viewBox="0 0 64 64" role="img" aria-label="Бджілка"><use href="#beeSym"/></svg>
+
+<script>
+(() => {
+  const top = document.getElementById('top');
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  const mcta = document.getElementById('mcta');
+  const hero = document.getElementById('hero');
+  const join = document.getElementById('join');
+
+  const setMenu = open => {
+    document.body.classList.toggle('menu-open', open);
+    burger.setAttribute('aria-expanded', open);
+    burger.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню');
+  };
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+
+  const onScroll = () => {
+    top.classList.toggle('scrolled', scrollY > 8);
+    const h = hero.getBoundingClientRect().bottom < 60;
+    const j = join.getBoundingClientRect();
+    const inJoin = j.top < innerHeight && j.bottom > 0;
+    mcta.classList.toggle('show', h && !inJoin);
+  };
+  addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Поява секцій: контент видимий одразу, анімація лише підсилює
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) {
+        const sibs = [...e.target.parentElement.children].filter(n => n.classList.contains('rv'));
+        e.target.style.animationDelay = Math.min(sibs.indexOf(e.target), 6) * 70 + 'ms';
+        e.target.classList.add('in'); io.unobserve(e.target);
+      }
+    }), {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(el => {
+      if (el.getBoundingClientRect().top > innerHeight) io.observe(el);
+    });
+  }
+
+  // Бджілка, що іноді пролітає
+  const bee = document.getElementById('bee');
+  if (reduce) return;
+  let flying = false;
+  const rand = (a, b) => a + Math.random() * (b - a);
+  const bez = (p0, p1, p2, p3, t) => {
+    const u = 1 - t;
+    return u*u*u*p0 + 3*u*u*t*p1 + 3*u*t*t*p2 + t*t*t*p3;
+  };
+  function fly() {
+    if (flying || document.hidden) return schedule();
+    flying = true;
+    const W = innerWidth, H = innerHeight, s = W < 600 ? 44 : 58;
+    bee.style.width = bee.style.height = s + 'px';
+    const ltr = Math.random() > .5;
+    const x0 = ltr ? -s - 10 : W + 10, x3 = ltr ? W + 10 : -s - 10;
+    const y0 = rand(H*.15, H*.75), y3 = rand(H*.1, H*.8);
+    const x1 = rand(W*.15, W*.45), x2 = rand(W*.55, W*.85);
+    const y1 = rand(0, H), y2 = rand(0, H);
+    const xs = ltr ? [x0,x1,x2,x3] : [x0,x2,x1,x3];
+    const ys = [y0,y1,y2,y3];
+    const dur = rand(4800, 7500) * (W < 600 ? .8 : 1);
+    const t0 = performance.now();
+    let lastTrail = 0, px = x0, py = y0;
+    bee.classList.add('on');
+    function frame(now) {
+      let t = Math.min(1, (now - t0) / dur);
+      const e = t < .5 ? 2*t*t : 1 - Math.pow(-2*t + 2, 2) / 2;
+      const wob = Math.sin(now / 140) * 6;
+      const x = bez(...xs, e), y = bez(...ys, e) + wob;
+      const dx = x - px, dy = y - py;
+      const right = dx >= 0;
+      // спрайт дивиться ліворуч: при польоті праворуч віддзеркалюємо, нахил — за напрямком руху
+      let ang = Math.atan2(dy, Math.abs(dx) || .001) * 180 / Math.PI;
+      ang = Math.max(-28, Math.min(28, ang));
+      const rot = right ? ang : -ang;
+      bee.style.transform = `translate(${x}px,${y}px) rotate(${rot}deg) scaleX(${right ? -1 : 1})`;
+      const flip = right ? 1 : -1;
+      if (now - lastTrail > 90) {
+        lastTrail = now;
+        const d = document.createElement('i');
+        d.className = 'trail';
+        d.style.left = (x + s/2 - flip*s*.4) + 'px';
+        d.style.top = (y + s*.6) + 'px';
+        document.body.appendChild(d);
+        setTimeout(() => d.remove(), 1100);
+      }
+      px = x; py = y;
+      if (t < 1 && flying) requestAnimationFrame(frame);
+      else { bee.classList.remove('on'); flying = false; schedule(); }
+    }
+    requestAnimationFrame(frame);
+  }
+  function schedule() { setTimeout(fly, rand(9000, 20000)); }
+  bee.addEventListener('click', e => {
+    const b = document.createElement('span');
+    b.className = 'bzz'; b.textContent = 'бзз! 💛';
+    b.style.left = e.clientX + 'px'; b.style.top = (e.clientY - 20) + 'px';
+    document.body.appendChild(b);
+    setTimeout(() => b.remove(), 1200);
+  });
+  setTimeout(fly, 3500);
+})();
+</script>
+
+</body>
+</html>
