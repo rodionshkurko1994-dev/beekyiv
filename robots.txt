@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rodionshkurko1994-dev.github.io/beekyiv/sitemap.xml
+Sitemap: https://bee.kyiv.ua/sitemap.xml
