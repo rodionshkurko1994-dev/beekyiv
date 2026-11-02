@@ -1,0 +1,13 @@
+{
+  "name": "Приватний садок «Бджілка»",
+  "short_name": "Бджілка",
+  "lang": "uk",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFCF4",
+  "theme_color": "#F2B93B",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ]
+}
