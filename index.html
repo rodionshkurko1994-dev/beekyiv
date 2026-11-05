@@ -664,7 +664,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <script>
 /* Відгуки з модерацією. Адреса сервісу відгуків (Cloudflare Worker): */
-const REVIEWS_API = '';
+const REVIEWS_API = 'https://bee-reviews.rodionshkurko1994.workers.dev';
 (() => {
   if (!REVIEWS_API) return;
   const api = REVIEWS_API.replace(/\/+$/, '') + '/reviews';
