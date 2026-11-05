@@ -267,11 +267,18 @@ section{padding-block:80px}
 .team blockquote{margin:0;font-size:1.12rem;max-width:58ch}
 .team blockquote p+p{margin-top:12px}
 .team .sign{font-size:1.9rem;color:var(--honey-ink);margin-top:10px}
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;align-items:start}
 .q{background:var(--surface);border-radius:22px;padding:20px;border:1.5px solid var(--line);font-size:.98rem;min-width:0}
 .q small{display:block;margin-top:8px;color:var(--muted);font-weight:700;font-size:.82rem}
 .q.user{display:grid;gap:10px;align-content:start}
 .q.user .txt{white-space:pre-line;overflow-wrap:anywhere}
+.q.user .txt.clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:7;overflow:hidden}
+.q.user .read{justify-self:start;background:none;border:0;padding:0;font:inherit;font-weight:800;font-size:.88rem;color:var(--honey-ink);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.q.user .meta{color:var(--muted);font-weight:700;font-size:.8rem}
+.g-sum{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-self:start;text-decoration:none;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:.95rem;transition:border-color .2s,transform .2s}
+.g-sum:hover{border-color:var(--honey);transform:translateY(-2px)}
+.g-sum b{font-family:var(--f-display);font-size:1.05rem}
+.g-sum .arr{color:var(--honey-ink);font-weight:800}
 .q.user .who{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:2px}
 .q.user .who b{font-weight:800;font-size:.95rem;overflow-wrap:anywhere}
 .q.user .who time{color:var(--muted);font-weight:700;font-size:.8rem}
@@ -553,11 +560,55 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="sec-head rv">
         <span class="eyebrow">Відгуки</span>
         <h2>Що про нас кажуть</h2>
+        <a class="g-sum" href="https://maps.google.com/?cid=16158000699331541640" target="_blank" rel="noopener"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><b>5,0</b><span>25 відгуків у Google</span><span class="arr" aria-hidden="true">→</span></a>
       </div>
       <div class="quotes" id="quotes" style="margin-top:0">
-        <div class="q rv">«Стільки любові та турботи дарує діткам.»<small>відгук мами з Instagram</small></div>
-        <div class="q rv">«У Бджілці все найкраще для дітей!»<small>коментар з Instagram</small></div>
-        <div class="q rv">«Чому таких садочків не було, коли я була маленька?»<small>коментар з Instagram</small></div>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Садочком "Бджілка" ми дійсно задоволені, бо отримуємо професійні заняття від вихователів, щодня у діток цікаві досліди, захоплюючі заняття, веселі ігри, смачне харчування, прогулянки на свіжому повітрі і пікніки в теплий час року. Щодня ми, як батьки, отримуємо багато фотографій і відео, як дітки проводять свій час і це дає відчуття, що ми теж поруч. Вважаю яскравим показником якості садочку і роботи вихователів Ольги і Катерини - це те, що наша донька прокидаючись вранці, хоче йти до садочку. Я бачу, що вихователі огортають діток щирою любов'ю, турботою і захопливим розвитком.»</p><div class="who"><b>Olga T.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Чудовий садочок, хороша і правильна атмосфера для дітей. Нарешті моя дитина ходить в садок з задоволенням! Я не маю багато часу на розвиваючи ігри з своєю дитиною, але з їх підходом я вже за це не переймаюсь! Дякую, вам за турботу та розвиток моєї дитини!!!»</p><div class="who"><b>Alena M.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Садочок дуже класний та сучасний 👍.  Красивий ремонт, все зроблено для комфортного перебування діток. Багато цікавих іграшок , книжок та ігор. 🤗Смачне , корисне харчування, як вдома🤗А вихователі це найбільший бонус цього садочку, не зважаючи на всі плюси, вони чуйні, люблячі та професійні люди. Дякую Вам, за турботу про мого малюка!😚»</p><div class="who"><b>Татьяна Я.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Приватний садочок «Бджілка» — справжній скарб для дітей і батьків! Тут працюють чуйні та уважні вихователі, проводять цікаві розвивальні заняття й створюють затишну, доброзичливу атмосферу. Особливо хочеться відзначити відкриту комунікацію з батьками та чудові святкові заходи, які дарують дітям багато радості. Щиро рекомендуємо «Бджілку» як місце, де дитина росте щасливою, оточена турботою, любов’ю та увагою!»</p><div class="who"><b>Катя Т.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Садочок просто казка, від комфортної оселі до харчування !!! Вихователі феї ! Дуже всім задоволені ! 🥰»</p><div class="who"><b>Наталия П.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Класне місце для діток, сучасний садочок. Цікаві заняття і є комфортні умови»</p><div class="who"><b>Anastasiia M.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Дуже приємна атмосфера 👍♥️
+Мій син каже,що дуже смачна їжа,
+Вихователі,це взагалі,окрема історія.
+Милі,розумні,цікаві,а головне,діти їх дуже люблять♥️♥️♥️♥️♥️»</p><div class="who"><b>Мария С.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Відвідуємо садочок і можу сказати тільки одне - це любов!
+Моя донька з величезним задоволенням біжить в садочок! Їй дуже подобається! Вона дуже активна і їй важливо, щоб вона була зайнята різного роду заняттями, що власне зараз і має, відвідуючи Бджілку! Кожен день насичений різноманітними програмами, кожного дня ми в чаті отримуємо фото занять наших діти! Харчування - топ, донечка із задоволенням їсть, тому тут я теж дуже рада)
+Хотіла б відмітити підхід вихователів: він дуже лагідний , спокійний. Донька з першого дня лишилась на цілий день , включаючи сон - що може казати про її спокій та довіру до вихователів!
+Дуже-дуже задоволена! Дуже рекомендую садочок!!!»</p><div class="who"><b>Anna K.</b><span class="meta">Google · <time datetime="2026-04">квітень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Дуже раджу садочок Бджілка! Власниця володіє іноземними мовами (англійська і французька), сам підхід до діток вражає! Всім приділяється увага, видно, що діткам весело і цікаво, вони постійно щось малюють чи майструють своїми руками.
+❤️❤️❤️»</p><div class="who"><b>Viktoriia P.</b><span class="meta">Google · <time datetime="2026-01">січень 2026</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Ми перейшли з іншого приватного садочка  саме до "Бджілки" через чудових викладачів!   Вони не тільки люблячі та лагідні до дітей, але й справжні професіонали своєї справи! До кожної дитини мають індивідуальний підхід та допомагають розвиватися в слабких та сильних сторонах. І в той же час всі діти завжди залучаються до спільних занять та розваг. Мій малюк маленький енерджайзер, але йому ніколи не буває нудно в садочку. Навпаки, він перший прокидається і починає збирати батьків, щоб відвели його швидше до садочку😂
+Дуже раді бути частиною цієї чудової , дружньої та люблячої сім'ї садочку "Бджілка"❣️»</p><div class="who"><b>Ксенія С.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Ми дуже задоволені цим дитячим садочком! Вихователі уважні, добрі та справді люблять дітей. Атмосфера в групах тепла й дружня, а заняття завжди цікаві та різноманітні — від творчих майстерень до пізнавальних ігор.
+
+Мені подобається, що тут приділяють
+розвитку кожної дитини: заохочують самостійність, творчість і допитливість. Харчування збалансоване, територія доглянута, а вихователі завжди відкриті
+до спілкування з батьками.
+
+Моя дитина щодня повертається додому з усмішкою та новими враженнями. Щиро рекомендую цей садочок усім батькам, які шукають безпечне, комфортне та тепле місце для своїх малюків!»</p><div class="who"><b>Іван П.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Наш досвід із приватним садочком «Бджідка» — надзвичайно позитивний. Це місце, де кожна дитина відчуває себе затишно, у безпеці та по-справжньому важливою. Вихователі тут дуже уважні, турботливі та професійні — вони знаходять підхід до діток.  Особливо подобаються творчі заняття, тематичні ігри та атмосфера, у якій дітей заохочують досліджувати світ, задавати питання та розвивати свою самостійність. Наша донька приходить додому радісна й захоплено розповідає про проведений день — і це найкращий показник. Харчування збалансоване, приміщення чисті й затишні. Батьки завжди отримують зворотний зв’язок, а власники завжди відкриті до діалогу та пропозицій. Щиро рекомендуємо садочок «Бджідка» тим, хто шукає місце з теплом, любов’ю та якісним підходом до розвитку дитини!»</p><div class="who"><b>Тетяна Г.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Ваш дитячий садочок – справжнє місце щастя для дітей! У вас панує дружня, турботлива атмосфера, і кожен день наповнений радістю, сміхом та новими відкриттями.
+Вихователі – справжні професіонали, які з любов’ю ставляться до кожної дитини, підтримують та надихають. Моя дитина з нетерпінням чекає на кожен день у садочку, а ми, батьки, впевнені, що вона росте в безпечному, доброзичливому та розвиваючому середовищі. Дякуємо всьому колективу❤️❤️»</p><div class="who"><b>Alexandra B.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Чудове місце для малюків! Садочок світлий, чистий і затишний. Діти багато часу проводять на свіжому повітрі, а програма розвитку добре продумана. Особливо хочу відзначити турботу персоналу — вони завжди уважні, терплячі та доброзичливі. Ми дуже раді, що обрали саме цей садочок.»</p><div class="who"><b>Renata D.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Садочок затишний, сучасний та доброзичливий. Дуже багато уваги приділяють творчому розвитку: аплікації, малювання, ліплення — дитина щодня приносить нові роботи. Вихователі завжди з усмішкою, на зв’язку з батьками, готові допомогти і підтримати. Однозначно рекомендую!»</p><div class="who"><b>Микита Д.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Дуже гарний садочок, з чудовими вихователями, які мають індивідуальний підхід до кожної дитини, дитина завжди йде до садочку із задоволенням. Великий дитячий майданчик, смачна кухня, дитячі майстер-класи, одним словом все для дітей!рекомендую🫶»</p><div class="who"><b>Anastasiia L.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Садочком повністю задоволені. Дитина стала більш самостійною, відкритою та активною. Тут дійсно вміють створити атмосферу довіри та підтримки. Харчування смачне, групи невеликі, а заняття різноманітні. Велике спасибі всім вихователям за їхню щоденну працю!»</p><div class="who"><b>Hlib G.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Дуже чудовий садочок❤️ Чудові вихователі, цікаві заняття, якісне харчування. Моїй дитині дуже подобається, а це багато про що говорить🥰»</p><div class="who"><b>Людмила М.</b><span class="meta">Google · <time datetime="2025-12">грудень 2025</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Хочеться сказати багато добрих слів та слів подяки на адресу нашого дитячого садка. Усі мої троє дітей відвідували цей садок. Завідувачка Оксани Миколаївни зібрала дуже дружний та злагоджений колектив. Вихователі Ольга Степанівна, Юлія та Мирослава – професіонали своєї справи, завжди привітні, з дітьми дуже терплячі, мають підхід до кожної дитини, знайдуть потрібне та лагідне слово. Для нашої сім'ї ці люди стали рідними.
+У дитсадку багато різних занять: англійська мова, хореографія, малювання, відмінна підготовка до школи, чудові свята. Є своя кухня з різноманітним меню. Вранці дітей оглядає педіатр.
+Ще хочеться відзначити зручну закриту територію, що безпечно для дітей є паркова зона.
+Найголовніше, що діти ходять до садка з великим задоволенням! Велике Вам спасибі! Нам із Вами дуже пощастило!»</p><div class="who"><b>Юлия К.</b><span class="meta">Google · <time datetime="2022">2022</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Ми ходимо до цього саду вже півроку. Дитині не було і 2 років, коли почали. Що сказати, думаю головний показник – це коли дитина в суботу вранці одягається і каже "мамо, я хочу в садок"! Просто приголомшливе ставлення педагогів, навчання новим навичкам, манерам, англійська, танці, вірші, пісні – щовечора дитина приходить з новими умілками та купою вражень! Велика подяка Оксані за ідеально організований простір для наших дітей:)»</p><div class="who"><b>Anna S.</b><span class="meta">Google · <time datetime="2022">2022</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Мій син Іван пішов до садоку, коли йому ще не було 2-х років. Першого дня ми прийшли і без проблем залишились на цілий день. Так я зрозуміла, що це наше місце, бо дитина не плакала, а це значить, що було знайдено правильний підхід.
+За цей рік, що Іван відвідував садок, він ріс і розвивався, для цього наша вихователь Надія, доклала надзвичайно багато зусиль і ми їй за це дуже вдячні!
+Дуже радує, що в садочку є інші викладачі і син міг вже вчити англійську, хореографію і музику. В такому ранньому віці дітки виступали для батьків з чудовою святковою програмою.
+Для мене був важливий той факт, що 2 рази на тиждень до діток приходила лікар і їх оглядала, що не завжди зустрінеш в  приватному садочку.
+В садочку працюють люди, які живуть своєю справою і прясвячують себе своїм вихованцям.»</p><div class="who"><b>Юля Б.</b><span class="meta">Google · <time datetime="2020">2020</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Без перебільшення це казковий світ для діток. Відмінне харчування, різноманітні розвиваючі ігри та заняття, сучасні підходи до виховання, абсолютна готовність випускників до школи. А головне це ставлення персоналу і адміністрації до дітей, як до своїх рідних!»</p><div class="who"><b>Сергей К.</b><span class="meta">Google · <time datetime="2020">2020</time></span></div></article>
+        <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Мені дуже сподобалися педагоги, які якісно проводять заняття, для мене великий показник, що моя дитина не плаче, і добре їсть)
+Рекомендую!»</p><div class="who"><b>Nadya V.</b><span class="meta">Google · <time datetime="2020">2020</time></span></div></article>
       </div>
       <div class="more-wrap" id="more-wrap" hidden><button class="btn ghost" type="button" id="more-btn">Показати ще відгуки</button></div>
 
@@ -663,6 +714,44 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <svg id="bee" viewBox="0 0 64 64" role="img" aria-label="Бджілка"><use href="#beeSym"/></svg>
 
 <script>
+/* Показ відгуків: перші 6, решта за кнопкою; довгі тексти згортаються */
+(() => {
+  const quotes = document.getElementById('quotes');
+  const moreWrap = document.getElementById('more-wrap');
+  const moreBtn = document.getElementById('more-btn');
+  const SHOW = 6;
+  let open = false;
+  function clamp(el) {
+    const t = el.querySelector('.txt');
+    if (!t || el.dataset.cl) return;
+    el.dataset.cl = '1';
+    t.classList.add('clamp');
+    requestAnimationFrame(() => {
+      if (t.scrollHeight <= t.clientHeight + 2) { t.classList.remove('clamp'); return; }
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'read'; b.textContent = 'Читати повністю';
+      b.setAttribute('aria-expanded', 'false');
+      b.addEventListener('click', () => {
+        const on = t.classList.toggle('clamp');
+        b.textContent = on ? 'Читати повністю' : 'Згорнути';
+        b.setAttribute('aria-expanded', String(!on));
+      });
+      t.after(b);
+    });
+  }
+  function layout() {
+    const cards = [...quotes.querySelectorAll('.q')];
+    cards.forEach((c, i) => { c.hidden = !open && i >= SHOW; if (!c.hidden) clamp(c); });
+    const rest = cards.length - SHOW;
+    moreWrap.hidden = open || rest <= 0;
+    moreBtn.textContent = `Показати ще ${rest} ${rest % 10 === 1 && rest % 100 !== 11 ? 'відгук' : (rest % 10 >= 2 && rest % 10 <= 4 && (rest % 100 < 12 || rest % 100 > 14)) ? 'відгуки' : 'відгуків'}`;
+  }
+  moreBtn.addEventListener('click', () => { open = true; layout(); });
+  window.beeReviewsLayout = layout;
+  layout();
+})();
+</script>
+<script>
 /* Відгуки з модерацією. Адреса сервісу відгуків (Cloudflare Worker): */
 const REVIEWS_API = 'https://bee-reviews.rodionshkurko1994.workers.dev';
 (() => {
@@ -676,9 +765,6 @@ const REVIEWS_API = 'https://bee-reviews.rodionshkurko1994.workers.dev';
   const ta = document.getElementById('rv-text');
   const count = document.getElementById('rv-count');
   const quotes = document.getElementById('quotes');
-  const moreWrap = document.getElementById('more-wrap');
-  const moreBtn = document.getElementById('more-btn');
-  const SHOW = 6;
   box.hidden = false;
 
   const months = ['січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня'];
@@ -704,12 +790,9 @@ const REVIEWS_API = 'https://bee-reviews.rodionshkurko1994.workers.dev';
     const list = (d.reviews || []).slice().reverse();
     if (!list.length) return;
     const frag = document.createDocumentFragment();
-    list.forEach((r, i) => { const el = card(r); if (i >= SHOW) el.hidden = true; frag.appendChild(el); });
+    list.forEach(r => frag.appendChild(card(r)));
     quotes.prepend(frag);
-    if (list.length > SHOW) {
-      moreWrap.hidden = false;
-      moreBtn.addEventListener('click', () => { quotes.querySelectorAll('.q.user[hidden]').forEach(e => e.hidden = false); moreWrap.hidden = true; });
-    }
+    window.beeReviewsLayout?.();
   }).catch(() => {});
 
   ta.addEventListener('input', () => { count.textContent = `${ta.value.length} / 1200`; });
