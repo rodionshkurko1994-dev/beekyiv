@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Приватний садок «Бджілка» у Києві — Позняки, діти 1,5–4 роки</title>
 <meta name="description" content="Сімейний приватний дитячий садок у Дарницькому районі Києва: вул. Здолбунівська, 13 (ЖК «Поетичний»). Діти 1,5–4 роки, маленькі групи, 5-разове харчування, англійська щодня, логопед.">
 <meta name="keywords" content="приватний садок Київ, дитячий садок Позняки, садок Дарницький район, садочок Здолбунівська, ЖК Поетичний садок, ясла 1,5 роки, міні-садок Київ, Бджілка">
@@ -269,6 +270,45 @@ section{padding-block:80px}
 .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
 .q{background:var(--surface);border-radius:22px;padding:20px;border:1.5px solid var(--line);font-size:.98rem;min-width:0}
 .q small{display:block;margin-top:8px;color:var(--muted);font-weight:700;font-size:.82rem}
+.q.user{display:grid;gap:10px;align-content:start}
+.q.user .txt{white-space:pre-line;overflow-wrap:anywhere}
+.q.user .who{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:2px}
+.q.user .who b{font-weight:800;font-size:.95rem;overflow-wrap:anywhere}
+.q.user .who time{color:var(--muted);font-weight:700;font-size:.8rem}
+.cells{display:inline-flex;gap:3px}
+.cells i{width:15px;height:17px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--line)}
+.cells i.f{background:var(--honey)}
+.more-wrap{display:flex;justify-content:center;margin-top:18px}
+.more-wrap[hidden]{display:none!important}
+
+.rev-form{margin-top:28px;background:var(--surface);border-radius:32px;padding:32px;box-shadow:var(--shadow);display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:start}
+.rev-form h3{font-size:clamp(1.3rem,3vw,1.7rem);font-weight:700}
+.rev-form .intro p{color:var(--muted);margin-top:10px;max-width:36ch}
+.rev-form .intro .hand{font-size:1.5rem;color:var(--honey-ink);margin-top:14px;display:block}
+.rev-form form{display:grid;gap:16px;min-width:0}
+.field{display:grid;gap:6px;min-width:0}
+.field label,.field legend{font-weight:800;font-size:.92rem}
+.field input[type="text"],.field textarea{font:inherit;font-size:1rem;color:var(--fg);background:var(--bg);border:1.5px solid var(--line);border-radius:16px;padding:13px 16px;width:100%;transition:border-color .2s,box-shadow .2s}
+.field textarea{min-height:130px;resize:vertical;line-height:1.5}
+.field input[type="text"]:focus,.field textarea:focus{outline:none;border-color:var(--honey);box-shadow:0 0 0 4px color-mix(in srgb,var(--honey) 25%,transparent)}
+.field .hint{font-size:.8rem;color:var(--muted);font-weight:600;text-align:right}
+fieldset.field{border:0;padding:0;margin:0}
+.rate{display:flex;gap:6px;flex-direction:row-reverse;justify-content:flex-end}
+.rate input{position:absolute;opacity:0;width:1px;height:1px}
+.rate label{cursor:pointer;width:42px;height:48px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--line);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;font-size:.85rem;color:var(--muted);transition:background .15s,transform .15s,color .15s}
+.rate label:hover,.rate label:hover~label,.rate input:checked~label{background:var(--honey);color:#2B2722}
+.rate label:hover{transform:translateY(-3px)}
+.rate input:focus-visible+label{outline:3px solid var(--lav);outline-offset:2px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.form-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}
+.form-msg{font-weight:700;font-size:.95rem;min-height:1.4em}
+.form-msg.err{color:#C0392B}
+.form-msg.ok{color:var(--honey-ink)}
+.thanks{display:grid;gap:10px;justify-items:start;padding-block:12px}
+.thanks svg{width:64px;height:64px}
+.thanks h4{font-family:var(--f-display);font-size:1.3rem;margin:0}
+.thanks p{color:var(--muted)}
 
 /* Join */
 .join .box{position:relative;overflow:hidden;background:var(--honey);color:#2B2722;border-radius:40px;padding:56px 48px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
@@ -328,6 +368,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   .team .card{grid-template-columns:1fr;padding:28px;gap:24px;justify-items:start}
   .avatar{width:130px;font-size:3rem}
   .quotes{grid-template-columns:1fr}
+  .rev-form{grid-template-columns:1fr;padding:24px 20px;gap:20px;border-radius:26px}
+  .form-foot .btn{flex:1 1 100%;justify-content:center}
   .join .box{padding:36px 24px}
   section{padding-block:60px}
   .mcta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .3s}
@@ -512,10 +554,51 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
         <span class="eyebrow">Відгуки</span>
         <h2>Що про нас кажуть</h2>
       </div>
-      <div class="quotes" style="margin-top:0">
+      <div class="quotes" id="quotes" style="margin-top:0">
         <div class="q rv">«Стільки любові та турботи дарує діткам.»<small>відгук мами з Instagram</small></div>
         <div class="q rv">«У Бджілці все найкраще для дітей!»<small>коментар з Instagram</small></div>
         <div class="q rv">«Чому таких садочків не було, коли я була маленька?»<small>коментар з Instagram</small></div>
+      </div>
+      <div class="more-wrap" id="more-wrap" hidden><button class="btn ghost" type="button" id="more-btn">Показати ще відгуки</button></div>
+
+      <div class="rev-form rv" id="review-box" hidden>
+        <div class="intro">
+          <h3>Залиште свій відгук</h3>
+          <p>Розкажіть, як вашому малюку в «Бджілці». Відгук з'явиться на сайті після перевірки.</p>
+          <span class="hand">Нам дуже важлива ваша думка 💛</span>
+        </div>
+        <form id="review-form" novalidate>
+          <div class="field">
+            <label for="rv-name">Ваше ім'я</label>
+            <input type="text" id="rv-name" name="name" maxlength="60" autocomplete="given-name" placeholder="Наприклад, мама Софійки" required>
+          </div>
+          <fieldset class="field">
+            <legend>Оцінка</legend>
+            <div class="rate" role="radiogroup" aria-label="Оцінка від 1 до 5">
+              <input type="radio" id="rv-r5" name="rating" value="5"><label for="rv-r5" title="5 з 5">5</label>
+              <input type="radio" id="rv-r4" name="rating" value="4"><label for="rv-r4" title="4 з 5">4</label>
+              <input type="radio" id="rv-r3" name="rating" value="3"><label for="rv-r3" title="3 з 5">3</label>
+              <input type="radio" id="rv-r2" name="rating" value="2"><label for="rv-r2" title="2 з 5">2</label>
+              <input type="radio" id="rv-r1" name="rating" value="1"><label for="rv-r1" title="1 з 5">1</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="rv-text">Відгук</label>
+            <textarea id="rv-text" name="text" maxlength="1200" placeholder="Що вам і дитині подобається в садочку?" required></textarea>
+            <span class="hint" id="rv-count">0 / 1200</span>
+          </div>
+          <div class="hp" aria-hidden="true"><label for="rv-site">Сайт</label><input type="text" id="rv-site" name="website" tabindex="-1" autocomplete="off"></div>
+          <div class="form-foot">
+            <button class="btn" type="submit" id="rv-submit">Надіслати відгук</button>
+            <span class="form-msg" id="rv-msg" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+        <div class="thanks" id="rv-thanks" hidden>
+          <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#beeSym"/></svg>
+          <h4>Дякуємо за відгук!</h4>
+          <p>Ми отримали його і опублікуємо після перевірки.</p>
+          <button class="btn ghost" type="button" id="rv-again">Написати ще один</button>
+        </div>
       </div>
     </div>
   </section>
@@ -579,6 +662,81 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <svg id="bee" viewBox="0 0 64 64" role="img" aria-label="Бджілка"><use href="#beeSym"/></svg>
 
+<script>
+/* Відгуки з модерацією. Адреса сервісу відгуків (Cloudflare Worker): */
+const REVIEWS_API = '';
+(() => {
+  if (!REVIEWS_API) return;
+  const api = REVIEWS_API.replace(/\/+$/, '') + '/reviews';
+  const box = document.getElementById('review-box');
+  const form = document.getElementById('review-form');
+  const msg = document.getElementById('rv-msg');
+  const btn = document.getElementById('rv-submit');
+  const thanks = document.getElementById('rv-thanks');
+  const ta = document.getElementById('rv-text');
+  const count = document.getElementById('rv-count');
+  const quotes = document.getElementById('quotes');
+  const moreWrap = document.getElementById('more-wrap');
+  const moreBtn = document.getElementById('more-btn');
+  const SHOW = 6;
+  box.hidden = false;
+
+  const months = ['січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня'];
+  const fmt = d => { const [y, m, dd] = d.split('-').map(Number); return `${dd} ${months[m - 1]} ${y}`; };
+
+  function card(r) {
+    const el = document.createElement('article');
+    el.className = 'q user';
+    const cells = document.createElement('span');
+    cells.className = 'cells';
+    cells.setAttribute('aria-label', `Оцінка ${r.rating} з 5`);
+    for (let i = 1; i <= 5; i++) { const c = document.createElement('i'); if (i <= r.rating) c.className = 'f'; cells.appendChild(c); }
+    const t = document.createElement('p'); t.className = 'txt'; t.textContent = `«${r.text}»`;
+    const who = document.createElement('div'); who.className = 'who';
+    const b = document.createElement('b'); b.textContent = r.name;
+    const time = document.createElement('time'); time.dateTime = r.date; time.textContent = fmt(r.date);
+    who.append(b, time);
+    el.append(cells, t, who);
+    return el;
+  }
+
+  fetch(api).then(r => r.json()).then(d => {
+    const list = (d.reviews || []).slice().reverse();
+    if (!list.length) return;
+    const frag = document.createDocumentFragment();
+    list.forEach((r, i) => { const el = card(r); if (i >= SHOW) el.hidden = true; frag.appendChild(el); });
+    quotes.prepend(frag);
+    if (list.length > SHOW) {
+      moreWrap.hidden = false;
+      moreBtn.addEventListener('click', () => { quotes.querySelectorAll('.q.user[hidden]').forEach(e => e.hidden = false); moreWrap.hidden = true; });
+    }
+  }).catch(() => {});
+
+  ta.addEventListener('input', () => { count.textContent = `${ta.value.length} / 1200`; });
+
+  const say = (t, kind) => { msg.textContent = t; msg.className = 'form-msg' + (kind ? ' ' + kind : ''); };
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    if ((data.name || '').trim().length < 2) return say('Вкажіть, будь ласка, ваше ім\'я', 'err'), document.getElementById('rv-name').focus();
+    if (!data.rating) return say('Оберіть оцінку від 1 до 5', 'err');
+    if ((data.text || '').trim().length < 10) return say('Напишіть хоча б кілька слів про садочок', 'err'), ta.focus();
+    btn.disabled = true; say('Надсилаємо…');
+    try {
+      const r = await fetch(api, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...data, rating: Number(data.rating) }) });
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok || !d.ok) throw new Error(d.error || 'Не вдалося надіслати відгук. Спробуйте ще раз');
+      form.reset(); count.textContent = '0 / 1200'; say('');
+      form.hidden = true; thanks.hidden = false;
+    } catch (err) {
+      say(err.message && !/fetch|network/i.test(err.message) ? err.message : 'Немає зв\'язку з сервером. Перевірте інтернет і спробуйте ще раз', 'err');
+    } finally { btn.disabled = false; }
+  });
+
+  document.getElementById('rv-again').addEventListener('click', () => { thanks.hidden = true; form.hidden = false; document.getElementById('rv-name').focus(); });
+})();
+</script>
 <script>
 (() => {
   const top = document.getElementById('top');
