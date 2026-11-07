@@ -242,8 +242,8 @@ section{padding-block:80px}
 .point p{color:var(--muted);font-size:.98rem}
 
 /* Features honeycomb */
-.feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-@media (max-width:1100px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:640px){.feat-grid{grid-template-columns:1fr}}
 .feat{background:var(--surface);border:1.5px solid var(--line);border-radius:26px;padding:24px 22px 22px;display:grid;gap:10px;align-content:start;transition:transform .25s,border-color .25s,box-shadow .25s;min-width:0}
 .feat:hover{transform:translateY(-6px) rotate(-.6deg);border-color:var(--honey);box-shadow:var(--shadow)}
 .feat .badge{width:58px;height:66px;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--honey-soft);display:grid;place-items:center}
@@ -375,7 +375,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 /* Responsive */
 @media (max-width:980px){
-  .feat-grid{grid-template-columns:repeat(2,1fr)}
   .timeline{grid-template-columns:repeat(2,1fr)}
   .timeline .step:last-child{grid-column:1/-1}
 }
@@ -402,7 +401,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   body{font-size:16px}
 }
 @media (max-width:520px){
-  .feat-grid,.timeline,.contacts .grid{grid-template-columns:1fr}
+  .timeline,.contacts .grid{grid-template-columns:1fr}
   .timeline .step:last-child{grid-column:auto}
   .day{border-radius:28px;margin-inline:6px}
   .hero .lead{font-size:1.06rem}
@@ -510,17 +509,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     <div class="wrap">
       <div class="sec-head rv">
         <span class="eyebrow">Що ми даємо дітям</span>
-        <h2>Десять причин, чому малюки біжать до нас зранку</h2>
+        <h2>Дев'ять причин, чому малюки біжать до нас зранку</h2>
       </div>
       <div class="feat-grid">
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2 .6-3.6 2-4.6 2.3 0 4 2 4 4.6"/></svg></div><h3>Сімейна атмосфера</h3><p>Тепло, турбота і відчуття другої родини для кожного малюка.</p></article>
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M4 6h10M9 4v2M6 6c0 4 3 7 6 8M12 6c-1 4-4 7-7 8M13 20l4-9 4 9M14.5 17h5"/></svg></div><h3>Англійська щодня</h3><p>Заняття з професійною філологинею, з перших років і в грі.</p></article>
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3M7.5 15h9"/></svg></div><h3>Досліди і сучасні методики</h3><p>Розвиваємося через цікаві заняття, експерименти й творчість.</p></article>
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/></svg></div><h3>Маленькі групи</h3><p>Максимум уваги: вихователь бачить кожну дитину, а не «групу».</p></article>
-        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2.6"/><path d="M8.5 13a3.5 3.5 0 0 1 7 0"/><circle cx="5" cy="15" r="2"/><circle cx="19" cy="15" r="2"/><path d="M2 21a3 3 0 0 1 6 0M16 21a3 3 0 0 1 6 0"/></svg></div><h3>Групові та індивідуальні заняття</h3><p>Займаємося разом у маленькій групі та окремо з кожною дитиною, у її власному темпі.</p></article>
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M3 12h18M5 12a7 7 0 0 0 14 0M12 5v3M9 3.5 10 6M15 3.5 14 6"/></svg></div><h3>5-разове харчування</h3><p>Збалансоване, домашнє, смачне. Голодним тут ніхто не залишиться.</p></article>
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M12 3c-1.5 3-5 4-5 8a5 5 0 0 0 10 0c0-4-3.5-5-5-8zM9 21h6"/></svg></div><h3>Майстер-класи</h3><p>Різноманітні творчі майстер-класи та тематичні свята протягом року.</p></article>
-        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div><h3>Танці</h3><p>Рухаємося під музику, розвиваємо координацію, пластику й почуття ритму.</p></article>
+        <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></div><h3>Танці</h3><p>Групові та індивідуальні заняття: рухаємося під музику, розвиваємо координацію, пластику й почуття ритму.</p></article>
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M4 14v-4a8 8 0 0 1 16 0v4M4 14a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2zM20 14a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2zM17 16v1a3 3 0 0 1-3 3h-2"/></svg></div><h3>Логопед</h3><p>Спеціаліст допомагає розвивати мовлення м'яко і вчасно.</p></article>
         <article class="feat rv"><div class="badge"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6M2 10h20"/></svg></div><h3>Закрита територія</h3><p>Власний майданчик на закритій прибудинковій території.</p></article>
       </div>
