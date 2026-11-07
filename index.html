@@ -73,6 +73,7 @@
         {"@type": "LocationFeatureSpecification", "name": "Закрита територія з майданчиком", "value": true}
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+13+%D0%9A%D0%B8%D1%97%D0%B2",
+      "telephone": "+380502020005",
       "sameAs": ["https://www.instagram.com/beekyiv/", "https://www.tiktok.com/@beekyiv"]
     },
     {
@@ -173,6 +174,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .btn:active{transform:translateY(3px);box-shadow:0 2px 0 -1px color-mix(in srgb,var(--honey) 55%,#7a4b00)}
 .btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 2px var(--fg)}
 .nav .btn{padding:10px 18px;font-size:.92rem;margin-left:8px}
+.nav .btn.ghost{box-shadow:inset 0 0 0 2px var(--fg)}
+.nav .btn.ghost:hover{background:var(--bg-2);transform:translateY(-2px)}
+.top-actions{display:flex;align-items:center;gap:8px}
+.nav a{white-space:nowrap}
+@media (min-width:861px) and (max-width:1180px){
+  .nav a{padding:8px 8px;font-size:.9rem}
+  .nav .btn{padding:10px 14px}
+  .nav .btn.call{width:42px;height:42px;padding:0;justify-content:center}
+  .nav .btn.call .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .logo small{display:none}
+}
+.call-m{display:none;width:46px;height:46px;border-radius:14px;background:var(--honey);color:#2B2722;place-items:center;text-decoration:none}
 .burger{display:none;width:46px;height:46px;border-radius:14px;border:0;background:var(--bg-2);color:var(--fg);cursor:pointer;place-items:center}
 .burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2.5px;border-radius:2px;background:currentColor;position:relative;transition:transform .25s,opacity .2s}
 .burger span::before,.burger span::after{content:"";position:absolute;left:0}
@@ -275,6 +288,9 @@ section{padding-block:80px}
 .q.user .txt.clamp{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:7;overflow:hidden}
 .q.user .read{justify-self:start;background:none;border:0;padding:0;font:inherit;font-weight:800;font-size:.88rem;color:var(--honey-ink);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .q.user .meta{color:var(--muted);font-weight:700;font-size:.8rem}
+.rev-head{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.rev-head .btn{padding:11px 20px;font-size:.95rem}
+@media (max-width:520px){.rev-head .btn{flex:1 1 100%;justify-content:center}}
 .g-sum{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-self:start;text-decoration:none;background:var(--surface);border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:.95rem;transition:border-color .2s,transform .2s}
 .g-sum:hover{border-color:var(--honey);transform:translateY(-2px)}
 .g-sum b{font-family:var(--f-display);font-size:1.05rem}
@@ -369,6 +385,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   .nav a{padding:14px 12px;font-size:1.05rem}
   .nav .btn{margin:8px 0 0;justify-content:center}
   .burger{display:grid}
+  .call-m{display:grid}
   .hero .wrap,.about .grid,.food .grid,.join .box{grid-template-columns:1fr}
   .hero{padding-block:28px 48px}
   .comb{max-width:340px}
@@ -428,9 +445,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <a href="#day">Наш день</a>
       <a href="#team">Відгуки</a>
       <a href="#contacts">Контакти</a>
+      <a class="btn ghost call" href="tel:+380502020005" aria-label="Подзвонити: +380 50 202 00 05"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span class="lbl">Подзвонити</span></a>
       <a class="btn" href="https://ig.me/m/beekyiv" target="_blank" rel="noopener">Записатися</a>
     </nav>
-    <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+    <div class="top-actions">
+      <a class="call-m" href="tel:+380502020005" aria-label="Подзвонити: +380 50 202 00 05"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+      <button class="burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav"><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -560,7 +581,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
       <div class="sec-head rv">
         <span class="eyebrow">Відгуки</span>
         <h2>Що про нас кажуть</h2>
-        <a class="g-sum" href="https://maps.google.com/?cid=16158000699331541640" target="_blank" rel="noopener"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><b>5,0</b><span>25 відгуків у Google</span><span class="arr" aria-hidden="true">→</span></a>
+        <div class="rev-head">
+          <a class="g-sum" href="https://maps.google.com/?cid=16158000699331541640" target="_blank" rel="noopener"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><b>5,0</b><span>25 відгуків у Google</span><span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn" href="#review-box" id="leave-review" hidden>Залишити відгук
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></a>
+        </div>
       </div>
       <div class="quotes" id="quotes" style="margin-top:0">
         <article class="q user"><span class="cells" role="img" aria-label="Оцінка 5 з 5"><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i><i class="f"></i></span><p class="txt">«Садочком "Бджілка" ми дійсно задоволені, бо отримуємо професійні заняття від вихователів, щодня у діток цікаві досліди, захоплюючі заняття, веселі ігри, смачне харчування, прогулянки на свіжому повітрі і пікніки в теплий час року. Щодня ми, як батьки, отримуємо багато фотографій і відео, як дітки проводять свій час і це дає відчуття, що ми теж поруч. Вважаю яскравим показником якості садочку і роботи вихователів Ольги і Катерини - це те, що наша донька прокидаючись вранці, хоче йти до садочку. Я бачу, що вихователі огортають діток щирою любов'ю, турботою і захопливим розвитком.»</p><div class="who"><b>Olga T.</b><span class="meta">Google · <time datetime="2026-10">жовтень 2026</time></span></div></article>
@@ -768,6 +793,14 @@ const REVIEWS_API = 'https://bee-reviews.rodionshkurko1994.workers.dev';
   const count = document.getElementById('rv-count');
   const quotes = document.getElementById('quotes');
   box.hidden = false;
+  const leave = document.getElementById('leave-review');
+  leave.hidden = false;
+  leave.addEventListener('click', e => {
+    e.preventDefault();
+    if (!thanks.hidden) { thanks.hidden = true; form.hidden = false; }
+    box.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    setTimeout(() => document.getElementById('rv-name').focus({ preventScroll: true }), 600);
+  });
 
   const months = ['січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня'];
   const fmt = d => { const [y, m, dd] = d.split('-').map(Number); return `${dd} ${months[m - 1]} ${y}`; };
