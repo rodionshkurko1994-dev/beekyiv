@@ -74,6 +74,7 @@
       ],
       "hasMap": "https://www.google.com/maps/search/?api=1&query=%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+13+%D0%9A%D0%B8%D1%97%D0%B2",
       "telephone": "+380502020005",
+      "email": "beekyiv@gmail.com",
       "sameAs": ["https://www.instagram.com/beekyiv/", "https://www.tiktok.com/@beekyiv"]
     },
     {
@@ -345,7 +346,7 @@ fieldset.field{border:0;padding:0;margin:0}
 .steps3 b{font-family:var(--f-display);margin-right:8px}
 
 /* Contacts */
-.contacts .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contacts .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .ct{background:var(--surface);border:1.5px solid var(--line);border-radius:26px;padding:26px;display:grid;gap:10px;align-content:start;min-width:0}
 .ct h3{font-family:var(--f-body);font-weight:800;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .ct .v{font-family:var(--f-display);font-weight:700;font-size:1.25rem;line-height:1.3;overflow-wrap:anywhere}
@@ -376,8 +377,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
   .feat-grid{grid-template-columns:repeat(2,1fr)}
   .timeline{grid-template-columns:repeat(2,1fr)}
   .timeline .step:last-child{grid-column:1/-1}
-  .contacts .grid{grid-template-columns:1fr 1fr}
-  .contacts .ct:last-child{grid-column:1/-1}
 }
 @media (max-width:860px){
   .nav{position:fixed;inset:calc(64px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;align-items:stretch;gap:4px;background:var(--bg);padding:12px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line);transform:translateY(-12px);opacity:0;visibility:hidden;transition:.25s}
@@ -403,7 +402,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 }
 @media (max-width:520px){
   .feat-grid,.timeline,.contacts .grid{grid-template-columns:1fr}
-  .timeline .step:last-child,.contacts .ct:last-child{grid-column:auto}
+  .timeline .step:last-child{grid-column:auto}
   .day{border-radius:28px;margin-inline:6px}
   .hero .lead{font-size:1.06rem}
   .cta-row .btn{flex:1 1 100%;justify-content:center}
@@ -713,6 +712,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
           <h3>Адреса</h3>
           <p class="v">вул. Здолбунівська, 13<br>ЖК «Поетичний», Київ</p>
           <a class="link" href="https://www.google.com/maps/search/?api=1&query=%D0%97%D0%B4%D0%BE%D0%BB%D0%B1%D1%83%D0%BD%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+13+%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener">Відкрити на мапі →</a>
+        </div>
+        <div class="ct rv">
+          <h3>Пошта</h3>
+          <p class="v">beekyiv@gmail.com</p>
+          <a class="link" href="mailto:beekyiv@gmail.com">Написати листа →</a>
         </div>
         <div class="ct rv">
           <h3>Instagram</h3>
